@@ -64,7 +64,7 @@ app.put('/board/:id', (req, res) => {
 app.delete('/board/:id', (req, res) => {
     //req.params.id 값 찾아 리스트에서 삭제
     const findItem = boardList.find((item) => {
-        return item,id == +req.params.id
+        return item.id == +req.params.id
     });
     const idx = boardList.indexOf(findItem);
     boardList.splice(idx, 1);
